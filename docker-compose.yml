@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  springboot-docker-compose-app-container:
+    image: springboot-docker-compose-app:1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/springboot-docker-compose-app
+    ports:
+      - "8081:8081"
